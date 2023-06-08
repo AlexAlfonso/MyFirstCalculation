@@ -21,5 +21,12 @@ namespace MyFirstCalculator
         {
             MessageBox.Show("Hello INFIERNO!");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReferenciaWeb.IService service = new ReferenciaWeb.ServiceClient();
+            service.GetData(5);
+            MessageBox.Show(service.GetData(5));
+        }
     }
 }
